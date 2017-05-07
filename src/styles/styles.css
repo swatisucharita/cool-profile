@@ -1,0 +1,54 @@
+/* colors */
+.bg-gull-gray {
+  background-color: #9ca9b9;
+}
+
+.fg-white {
+  color: #fff;
+}
+
+/* spacing */
+.row-buffer {
+  margin-top: 10px;
+}
+
+#app {
+  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #4d4d4d;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+#app #main-content {
+  height: 86vh;
+}
+
+#app-header nav {
+  padding: 14px 10px;
+}
+
+#app-header nav a {
+  padding: 10px;
+  font-size: 20px;
+}
+
+#app-header nav a.active {
+  color: orange;
+}
+
+#app-footer p {
+  padding: 5px 10px;
+}
+
+table tr {
+  border-bottom: 1px solid #ccc;
+}
+
+table tr th,
+table tr td {
+  padding: 5px 10px;
+}
+
+#users-list {
+  width: 100%;
+}
