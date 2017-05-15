@@ -3,17 +3,18 @@
   "version": "1.0.0",
   "description": "Portfolio creator app",
   "scripts": {
-       "prestart": "babel-node tools/startMessage.js",
-        "start": "npm-run-all --parallel open:src lint:watch",
-        "open:src": "babel-node tools/srcServer.js",
-        "lint": "node_modules/.bin/esw webpack.config.* src tools",
-        "lint:watch": "npm run lint -- --watch"
+    "prestart": "babel-node tools/startMessage.js",
+    "start": "npm-run-all --parallel open:src lint:watch",
+    "open:src": "babel-node tools/srcServer.js",
+    "lint": "node_modules/.bin/esw webpack.config.* src tools",
+    "lint:watch": "npm run lint -- --watch"
   },
   "author": "Swati Sucharita",
   "license": "MIT",
   "dependencies": {
     "babel-polyfill": "6.8.0",
     "bootstrap": "3.3.6",
+    "classnames": "^2.2.5",
     "jquery": "2.2.3",
     "react": "15.0.2",
     "react-dom": "15.0.2",

@@ -4,9 +4,12 @@
   const users = [
     {
       id: 'swati-sucharita',
+      firstName: 'Swati',
+      lastName: 'Sucharita',
       name: 'Swati Sucharita',
       email: 'swati@gmail.com',
       phoneNumber: '+917207565764',
+      gender: 'female',
       address: {
         street1: 'Chanda Naik Thanda',
         street2: 'Madhapur',
@@ -18,9 +21,12 @@
     },
     {
       id:  'tukuna-patro',
+      firstName: 'Tukuna',
+      lastName: 'Patro',
       name: 'Tukuna Patro',
       email: 'tukuna@gmail.com',
       phoneNumber: '+918297074155',
+      gender: 'male',
       address: {
         street1: 'Anatei',
         street2: '',
@@ -34,7 +40,7 @@
   ];
 
   const generateId = (attr) => {
-    return attr.replaceAll(' ', '-');
+    return attr.replace(' ', '-');
   };
 
   class UserApi {
@@ -46,11 +52,11 @@
       });
     }
 
-    static addUser(user){
+    static registerUser(user){
       user = Object.assign({}, user);
       return new Promise((resolve, reject) => {
         setTimeout(() => {
-          const manadatoryAttributes = ['name', 'email'];
+          const manadatoryAttributes = ['firstName', 'lastName', 'email'];
 
           manadatoryAttributes.forEach(attr => {
             if (!user[attr]){
@@ -58,6 +64,7 @@
             }
           });
 
+          user.name = [user.firstName, user.lastName].join(' ');
           user.id = generateId(user.name);
           users.push(user);
 

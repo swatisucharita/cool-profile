@@ -3,7 +3,7 @@ import UserListRow  from './UserListRow';
 
 const UserList = ({users}) => {
   return (
-    <table id="users-list">
+    <table id="users-list" className="row-buffer">
       <thead>
         <tr className="bg-gull-gray fg-white">
           <th>Name</th>

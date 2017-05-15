@@ -1,8 +1,10 @@
 import {combineReducers} from 'redux';
 import users from './userReducer';
+import ajaxCallsCount from './ajaxCallReducer';
 
 const rootReducer = combineReducers({
-  users
+  users,
+  ajaxCallsCount
 });
 
 export default rootReducer;

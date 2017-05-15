@@ -52,3 +52,13 @@ table tr td {
 #users-list {
   width: 100%;
 }
+
+form .error-input {
+  border: 1px solid #c74242;
+}
+
+.error{
+  color: #c74242;
+  position: absolute;
+  padding: 2px 0px 2px 9px;
+}
