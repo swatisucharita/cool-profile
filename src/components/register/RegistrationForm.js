@@ -23,7 +23,7 @@ const RegistrationForm = ({user, onChange, onSubmit, errors}) => {
               error={errors.lastName}
               onChange={onChange} />
 
-            <TextField
+            <EmailField
               name={'email'}
               value={user.email}
               placeholder={'Email'}
@@ -47,6 +47,7 @@ const RegistrationForm = ({user, onChange, onSubmit, errors}) => {
               <input
                 type="submit"
                 value="Save"
+                className="btn btn-primary"
                 onClick={onSubmit}/>
         </form>
       </div>

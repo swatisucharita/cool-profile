@@ -1,4 +1,4 @@
-import userApi from '../api/mockUserApi';
+import userApi from '../api/userApi';
 import * as types from './actionTypes';
 
 function loadUsersSuccess(users){
@@ -23,7 +23,7 @@ export function loadUsers(){
     return userApi.loadAllUsers().then(users => {
       dispatch(ajaxCallSuccess());
       dispatch(loadUsersSuccess(users));
-    }).catch(error => {
+    }, error => {
       dispatch(ajaxCallError());
       throw(error);
     });
@@ -40,7 +40,7 @@ export function registerUser(user){
     return userApi.registerUser(user).then(savedUser => {
       dispatch(ajaxCallSuccess());
       dispatch(userRegisterSuccess(savedUser));
-    }).catch(error => {
+    }, error => {
       dispatch(ajaxCallError());
       throw(error);
     });

@@ -5,7 +5,8 @@
   "scripts": {
     "prestart": "babel-node tools/startMessage.js",
     "start": "npm-run-all --parallel open:src lint:watch",
-    "open:src": "babel-node tools/srcServer.js",
+    "poststart": "babel-node tools/openScreen.js",
+    "open:src": "nodemon --exec babel-node tools/srcServer.js",
     "lint": "node_modules/.bin/esw webpack.config.* src tools",
     "lint:watch": "npm run lint -- --watch"
   },
@@ -16,6 +17,7 @@
     "bootstrap": "3.3.6",
     "classnames": "^2.2.5",
     "jquery": "2.2.3",
+    "mongodb": "^2.2.26",
     "react": "15.0.2",
     "react-dom": "15.0.2",
     "react-redux": "4.4.5",
@@ -34,6 +36,7 @@
     "babel-preset-react": "6.5.0",
     "babel-preset-react-hmre": "1.1.1",
     "babel-register": "6.8.0",
+    "body-parser": "^1.17.2",
     "cheerio": "0.22.0",
     "colors": "1.1.2",
     "compression": "1.6.1",
