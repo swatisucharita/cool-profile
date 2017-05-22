@@ -1,49 +1,7 @@
 import delay from './delay';
 import $ from 'jquery';
 
-const users = [
-  {
-    id: 'swati-sucharita',
-    firstName: 'Swati',
-    lastName: 'Sucharita',
-    name: 'Swati Sucharita',
-    email: 'swati@gmail.com',
-    phoneNumber: '+917207565764',
-    gender: 'female',
-    address: {
-      street1: 'Chanda Naik Thanda',
-      street2: 'Madhapur',
-      city: 'Hyderbad',
-      state: 'Telengana',
-      pincode: '500081',
-      countryCode: 'IN'
-    }
-  },
-  {
-    id:  'tukuna-patro',
-    firstName: 'Tukuna',
-    lastName: 'Patro',
-    name: 'Tukuna Patro',
-    email: 'tukuna@gmail.com',
-    phoneNumber: '+918297074155',
-    gender: 'male',
-    address: {
-      street1: 'Anatei',
-      street2: '',
-      city: 'Berhampur',
-      state: 'Odisha',
-      pincode: '752104',
-      countryCode: 'IN'
-
-    }
-  }
-];
-
-const generateId = (attr) => {
-  return attr.replace(' ', '-');
-};
-
-const baseURL = '//localhost:3000/api/';
+const baseURL = '//localhost:3001/api/';
 class UserApi {
   static loadAllUsers(){
     return $.getJSON(baseURL + 'users', (data) => {

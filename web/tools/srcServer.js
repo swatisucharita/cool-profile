@@ -3,7 +3,8 @@ import bodyParser from 'body-parser';
 import webpack from 'webpack';
 import path from 'path';
 import config from '../webpack.config.dev';
-import userRoute from './routes/userRoute';
+// import userRoute from './routes/userRoute';
+import open from 'open';
 
 /* eslint-disable no-console */
 
@@ -24,9 +25,9 @@ app.use(require('webpack-dev-middleware')(compiler, {
 
 app.use(require('webpack-hot-middleware')(compiler));
 
-app.get('/api/users', userRoute.index);
-
-app.post('/api/user', userRoute.register);
+// app.get('/api/users', userRoute.index);
+//
+// app.post('/api/user', userRoute.register);
 
 app.get('/*', function(req, res) {
   res.sendFile(path.join( __dirname, '../src/index.html'));
@@ -35,5 +36,7 @@ app.get('/*', function(req, res) {
 app.listen(port, function(err) {
   if (err) {
     console.log(err);
+  } else {
+    open(`http://localhost:${port}`);
   }
 });
